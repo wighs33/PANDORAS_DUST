@@ -7,6 +7,12 @@
 
 APANDORAS_GameModeBase::APANDORAS_GameModeBase()
 {
-	DefaultPawnClass = APANDORAS_Character__Diel_Eve::StaticClass();
+	static ConstructorHelpers::FClassFinder<ACharacter> Character__Diel_Eve(TEXT("/Game/PandorasDust/Characters/Diel_Eve/Blueprints/BP_PANDORAS_Character__Diel_Eve"));
+	if (Character__Diel_Eve.Succeeded())
+	{
+		DefaultPawnClass = Character__Diel_Eve.Class;
+	}
+
+	//DefaultPawnClass = APANDORAS_Character__Diel_Eve::StaticClass();
 	PlayerControllerClass = APANDORAS_PlayerController::StaticClass();
 }

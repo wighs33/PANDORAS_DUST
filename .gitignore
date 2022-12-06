@@ -12,9 +12,15 @@ Platforms/*
 *.pdb
 *.idb
 
-Content/*
-
-
+*.umap
+Content/__ExternalActors__/*
+Content/__ExternalObjects__/*
+Content/Characters/*
+Content/Collections/*
+Content/Developers/*
+Content/LevelPrototyping/*
+Content/StarterContent/*
+Content/ThirdPerson/*
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/unrealengine
