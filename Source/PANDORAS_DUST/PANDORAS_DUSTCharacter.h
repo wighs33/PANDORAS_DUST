@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
+#include "PANDORAS_DUST.h"
 #include "GameFramework/Character.h"
 #include "InputActionValue.h"
 #include "PANDORAS_DUSTCharacter.generated.h"

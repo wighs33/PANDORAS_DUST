@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
+#include "PANDORAS_DUST.h"
 #include "GameFramework/GameModeBase.h"
 #include "PANDORAS_DUSTGameMode.generated.h"
 
