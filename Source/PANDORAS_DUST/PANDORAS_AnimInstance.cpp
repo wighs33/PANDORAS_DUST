@@ -5,6 +5,7 @@
 
 UPANDORAS_AnimInstance::UPANDORAS_AnimInstance()
 	:CurrentPawnSpeed(0.0f)
+	,IsInAir(false)
 {
 }
 
@@ -16,5 +17,9 @@ void UPANDORAS_AnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 	if (IsValid(Pawn))
 	{
 		CurrentPawnSpeed = Pawn->GetVelocity().Size();
+		if (auto Character = Cast<ACharacter>(Pawn))
+		{
+			IsInAir = Character->GetMovementComponent()->IsFalling();
+		}
 	}
 }
